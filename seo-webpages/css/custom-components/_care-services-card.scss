@@ -1,0 +1,67 @@
+
+.content-area-right__services-section-care-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    @include breakpoint ($phone-only) {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    &.services-section-care-card-multiple{
+        grid-template-columns: repeat(4, 1fr);
+        @include breakpoint ($tablet-portrait) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint ($tablet-landscape) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint($phone-only){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @include breakpoint($small-landscape){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        // @include breakpoint ($phone-only) {
+        //     grid-template-columns: 1fr;
+        //     gap: 12px;
+        // }
+        // @include breakpoint ($small-landscape) {
+        //     grid-template-columns: 1fr 1fr;
+        //     gap: 12px;
+        // }
+    }
+    .content-area-right__services-section-care-card-item {
+        background: $primary-50 ;
+        border: 1px solid $gray-300;
+        border-radius: 12px;
+        padding: 24px;
+        gap: 44px;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint ($phone-only) {
+            padding: 20px;
+            gap: 20px;
+        }
+        .content-area-right__services-section-care-card-item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            @include breakpoint ($phone-only) {
+                gap: 12px;
+            }
+            .services-section-care-card-item-title {
+                padding: 0px 0px 12px;
+                border-bottom: 1px solid $primary-200;
+                font-weight: 690;
+                color: $gray-800;
+            }
+            .services-section-care-card-item-detail {
+                .services-section-care-card-item-page-link {
+                    color: $gray-600;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+}

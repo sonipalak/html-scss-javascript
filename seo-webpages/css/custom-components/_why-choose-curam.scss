@@ -1,0 +1,59 @@
+.content-area-right__why-choose-curam-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: $gray-100;
+    @include breakpoint ($tablet-portrait) {
+        gap: 32px;
+    }
+    @include breakpoint ($small-landscape) {
+        gap: 32px;
+    }
+
+    .content-area-right__why-choose-curam-section-sub-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+
+        .content-area-right__why-choose-curam-section-sub-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 20px;
+        }
+    }
+
+    .content-area-right__why-choose-curam-section-sub-section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+
+        .content-area-right__why-choose-curam-section-sub-section2-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 16px;
+            gap: 16px;
+            background: $gray-100;
+            border: 1px solid $gray-300;
+            border-radius: 8px;
+            
+            @include breakpoint ($tablet-portrait) {
+                background-color: $primary-50;
+                border-color: transparent;
+            }
+            @include breakpoint ($phone-only) {
+                background-color: $primary-50;
+                border-color: transparent;
+            }
+            @include breakpoint ($small-landscape) {
+                background-color: $primary-50;
+                border-color: transparent;
+            }
+        }
+    }
+}

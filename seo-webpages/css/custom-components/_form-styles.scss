@@ -1,0 +1,115 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    
+}
+
+.input-field {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #616161;
+    margin-bottom: 5px;
+}
+
+
+input.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 3px !important;
+    padding-left: 13px !important;
+    height: 44px !important;
+    font-size: 14px ;
+    box-sizing: border-box !important;
+    margin-bottom: 0 ;
+    // -webkit-appearance: none;
+    background-color: white ;
+    // padding-bottom: 3px ;
+
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: material-color('grey', '400');
+        font-weight: 300;
+        // font-family: 'Neue Plak Text' ;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: material-color('grey', '400');
+        font-weight: 300;
+        // font-family: 'Neue Plak Text' ;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: material-color('grey', '400');
+        font-weight: 300;
+        // font-family: 'Neue Plak Text' ;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: material-color('grey', '400');
+        font-weight: 300;
+        // font-family: 'Neue Plak Text' ;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 3px !important;
+    // font-family: 'Roboto' ;
+    padding-left: 13px !important;
+    height: 44px !important;
+    font-size: 14px ;
+    box-sizing: border-box !important;
+    margin-bottom: 0 ;
+    // -webkit-appearance: none;
+    background-color: white ;
+    outline: none ;
+
+    background: url(/res/select_caret.svg) calc(100% - 14px) calc(50% - 0px) no-repeat;
+
+    cursor: pointer;
+}
+
+
+textarea {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 2px !important;
+    // font-family: 'Roboto' ;
+    padding-left: 13px !important;
+    /* height: 44px !important; */
+    box-sizing: border-box !important;
+    resize: vertical !important;
+    background-color: white ;
+    font-size: 16px;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: material-color('grey', '400');
+        font-weight: 300;
+        // font-family: $Campton-Book ;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: material-color('grey', '400');
+        font-weight: 300;
+        // font-family: $Campton-Book ;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: material-color('grey', '400');
+        font-weight: 300;
+        // font-family: $Campton-Book ;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: material-color('grey', '400');
+        font-weight: 300;
+        // font-family: $Campton-Book ;
+    }
+}

@@ -1,0 +1,182 @@
+section#faq-section{
+    .container{
+        @include breakpoint($phone-only){
+            padding: 0px;
+        }
+        @include breakpoint ($tablet-portrait) {
+            padding: 0px;
+        }
+    }
+
+    .faq-section__contetnt{
+        display: grid;
+        background-color: $primary-600;
+        color: $gray-100;
+        padding: 64px;
+        gap: 64px;
+        
+        @include breakpoint($not-phone){
+            border-radius: $radius-normal;
+        }
+
+        @include breakpoint($phone-only){
+            padding: 44px 24px;
+            gap: 44px;
+        }
+        @include breakpoint ($tablet-portrait) {
+            border-radius: 0px;
+        }
+
+        a.btn{
+            color : $gray-100;
+            border: 1px solid $gray-100;
+
+            &:hover {
+                background: rgba($gray-100, 0.3);
+            }
+        }
+    }
+
+    .faq-item{
+        display: grid;
+        gap: 16px;
+        padding: 24px 12px;
+        border-bottom: 1px solid #585DCD;
+
+        @include breakpoint($phone-only){
+            padding: 24px 0px;
+            gap: 12px;
+        }
+
+        svg{
+            @include breakpoint($phone-only){
+                width: 24px;
+            }
+        }
+
+        &.cell-title-collapsed{
+            gap: 26px;
+            @include breakpoint($phone-only){
+                gap: 12px;
+            }
+        }
+        &.active{
+            .faq-item-content.show{
+                display: block;
+            }
+            h2.faq-cell__header 
+            {
+                button{
+                    svg.collpsed{
+                        display: none;
+                    }
+                    svg.open{
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        h2.faq-cell__header{
+            font-size: 24px;
+            font-weight: $font-760;
+            line-height: 140%;
+
+            button{
+                width: 100%;
+                background-color: transparent;
+                box-shadow: none;
+                color: $gray-100;
+                border: none;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                font-weight: $font-760;
+                font-size: 24px;
+                line-height: 140%;
+                text-align: left;
+                padding: 0;
+
+                svg {
+                    width: 32px;
+                    @include breakpoint($phone-only){
+                        width: 24px;
+                    }
+                }
+                
+                .faq-item__title{
+                    max-width: calc(100% - 48px);
+                    @include breakpoint($phone-only){
+                        max-width: calc(100% - 40px);
+                    }
+                }
+
+                svg.collpsed{
+                    display: block;
+                }
+                svg.open{
+                    display: none;
+                }
+
+                @include breakpoint($phone-only){
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .faq-item-content{
+            display: none;
+            padding: 0px 0px 0px 50px;
+
+            @include breakpoint($small) {
+                padding: 0 0 0 40px;
+            }
+            
+            p{
+                font-weight: 640;
+                font-size: 17px;
+                line-height: 140%;
+                padding: 0px 0px 0px 14px;
+                border-left: 2px solid $gray-100;
+                @include breakpoint($phone-only){
+                    font-size: 16px;
+                }
+                a{
+                    color: #ffffff;
+                }
+                
+            }
+            
+        }
+    } 
+
+   
+
+    .faq-item-content-inner {
+        padding: 0px 0px 0px 14px;
+        border-left: 2px solid #ffffff;
+        font-weight: 560;
+        font-size: 17px;
+        line-height: 140%;
+
+        a{
+            font-weight: 560;
+            font-size: 17px;
+            line-height: 140%;
+            text-decoration: underline; 
+            color: #ffffff;
+        }
+
+        p{
+            padding: 0px !important;
+            border: none !important;
+            margin: 0px;
+        }
+        ul{
+            margin: 0px;
+            @include breakpoint ($phone-only) {
+                padding-left: 14px;
+            }
+        }
+    } 
+}

@@ -1,0 +1,46 @@
+$gap-extrasmall : 8px;
+$gap-small : 14px;
+$gap-medium : 24px;
+$gap-large : 64px;
+
+
+$sec-regular : 64px;
+$sec-medium : 108px;
+$sec-large : 104px;
+
+$radius-normal : 12px;
+
+$smooth-transition-time: 300ms;
+
+$query-maxwidth-large : 1536px;
+
+
+/* ~~~~~~~~~~~~~~~~MIXINS~~~~~~~~~~~~~~~~ */
+
+@mixin smooth-transition($smooth-transition-time) {
+    -webkit-transition: all;
+    -moz-transition: all;
+    transition: all;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-duration: $smooth-transition-time;
+};
+
+%app-scroll-style {
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6;
+  }
+}
+%app-scroll-hide {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+      display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}

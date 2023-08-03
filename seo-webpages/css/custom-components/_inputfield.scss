@@ -1,0 +1,10 @@
+input[type="text"] {
+    @include smooth-transition(200ms);
+}
+
+input:-webkit-autofill {
+    border-radius: 12px;
+}
+input:autofill {
+    border-radius: 12px;
+}

@@ -1,0 +1,77 @@
+.content-area-right__happy-clients-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    background: $primary-50;
+    
+
+    h1.content-area-right__happy-clients-title {
+        .highlight-text {
+            color: $primary-700;
+        }
+    }
+
+    .content-area-right__happy-clients-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 48px;
+        justify-content: space-between;
+        width: 100%;
+
+        @include breakpoint ($phone-only) {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            gap: 44px;
+        }
+
+        .content-area-right__happy-clients-content-points {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 20px;
+
+            .content-area-right__happy-clients-content-points-p1 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 16px;
+
+                svg {
+                    height: 44px;
+                    width: 44px;
+                    min-height: 44px;
+                    min-width: 44px;
+                }
+            }
+        }
+        .content-area-right__happy-clients-content-image img {
+            max-height: 323px;
+            position: relative;
+            top: -33.5px;
+            border-radius: 16px;
+            @include breakpoint ($tablet-landscape) {
+                max-width: 278px;
+                width: 278px;
+                height: 323px;
+                object-fit: cover;
+            }
+            @include breakpoint ($tablet-portrait) {
+                max-width: 235px;
+                width: 235px;
+                height: 323px;
+                object-fit: cover;
+            }
+            @include breakpoint ($phone-only) {
+                top: 0;
+                width: 100%;
+                height: 383px;
+                object-fit: cover;
+            }
+        }
+    }
+}

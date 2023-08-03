@@ -1,0 +1,39 @@
+#carers__content__usps {
+    .carers-content__usps-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        h1 {
+            @include breakpoint ($tablet-portrait) {
+                font-size: 20px;
+            }
+            @include breakpoint ($tablet-landscape) {
+                font-size: 20px;
+            }
+            @include breakpoint ($small-landscape) {
+                font-size: 20px;
+            }
+        }
+        .carers-content__usps-content-items {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 12px; 
+            @include breakpoint ($tablet-portrait) {
+                grid-template-columns: 1fr;
+            }
+            @include breakpoint ($small-landscape) {
+                grid-template-columns: repeat(3,1fr);
+            }
+            @include breakpoint ($phone-only) {
+                grid-template-columns: 1fr;
+            }
+             .carers-content__usps-content-single-item {
+                display: flex;
+                padding: 12px;
+                gap: 12px;
+                background: $gray-100;
+                border-radius: 12px;
+            }
+        }
+    }
+}
