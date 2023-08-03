@@ -1,0 +1,30 @@
+.header__title{
+    &.headerwithbtn{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.changenumber-block{
+    font-weight: 560;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $grays-600;
+    display: flex;
+    gap: 5px;
+}
+#reset-password{
+    .form__input-group{
+        .form-control__custom{
+            padding: 15px 16px;;
+        }
+    }
+}
+
+#otp-screen{
+    .form__input-group{
+        .form-control__custom{
+            padding: 15px 16px;;
+        }    
+    }
+}

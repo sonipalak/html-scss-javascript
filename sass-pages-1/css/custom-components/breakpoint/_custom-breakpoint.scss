@@ -1,0 +1,14 @@
+
+$phone-only: max-width 600px;
+$tablet-only : (max-width 992px) (min-width 769px);
+$tablet : max-width 992px;
+$not-phone: min-width 600px;
+
+$not-large-device : max-width 1440px;
+$large-desktop : min-width 1600px;
+$medium-device : max-width 1080px;
+
+$tablet-landscape: (min-width 600px) (max-width 1194px) (orientation landscape);
+$tablet-portrait: (min-width 600px) (max-width 1025px) (orientation portrait);
+
+$small-phone-only: max-width 372px;

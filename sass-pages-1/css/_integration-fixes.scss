@@ -1,0 +1,239 @@
+.region.region-content {
+    height: 100%;
+}
+
+form.curam-onboarding-form {
+    height: inherit;
+}
+
+#form-wrapper {
+    display: grid;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+// stagin site issues fixes - 24-01-2023
+main.scroll.main-client-dashboard.showing.last-job-id {
+    overflow: initial;
+}
+body.no-scroll {
+    overflow-y: scroll;
+    & > * {
+        overflow-y: hidden;
+    }
+}
+
+// Job Posting Modal Field Fixes
+#postcode-popup {
+    .modal-content {
+        .dropdown:focus ~ .dropdown-menu {
+            display: unset;
+        }
+        .input__field-wrapper {
+
+            .dropdown-menu.postocode-results {
+                width: 100%;
+            }
+            &.other__input {
+                padding: 0!important;
+                gap: 0 !important;
+            }
+            .prefix-img {
+                @include breakpoint ($phone-only) {
+                    padding: 14px 12px !important;
+                }
+                svg {
+                    @include breakpoint ($phone-only) {
+                        width: 24PX;
+                        height: 24px;
+                    } 
+                }
+            }
+            input.form-control__custom {
+                @include breakpoint ($phone-only) {
+                    padding: 15px 8px 15px 16px !important;
+                    padding-left: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+
+#postcode-popup .input__field-wrapper.reducepadding.other__input {
+    @include breakpoint ($phone-only) {
+        padding: 0!important;
+        gap:0 !important;
+    }
+}
+
+@include breakpoint ($phone-only) {
+    .modal{
+        .modal-content{
+            transform: translateY(100%);
+            @include smooth-transition(200ms);
+        }
+    }
+    .modal.show{
+        .modal-content{
+            transform: translateY(0px);
+            @include smooth-transition(200ms);
+        }
+    }
+}
+
+@include breakpoint ($phone-only) {
+    .carerprofile-main .carerprofile__content {
+        max-height: calc(100vh - 51px) !important;
+    }
+}   
+
+// Sign up page fixed: https://stage.curamcare.com/onboarding/get-started#
+
+body.no-user-logged-in {
+    margin-top: 0;
+
+    header {
+        position: relative;
+    }
+
+    #get-started {
+        height: inherit;
+    }
+
+    #custom-onboarding-client-register {
+        height: inherit;
+    }
+}
+
+.modal .modal-content .modal-footer #confirmBtn {
+    float: none;
+    padding: 15px 20px !important;
+    appearance: none;
+}
+
+a.btn {
+    appearance: none;
+}
+
+// Sidebar Filter Issue Fix: https://stage.curamcare.com/client-dashboard
+section#carer-card-list-section .carer-card-list__filters {
+    height: 100vh;
+    &.left-sidebar {
+        padding-bottom: 0;
+        ul.dropdown-menu {
+            background-color: $grays;
+        }
+    }
+    .apply-filters-btn {
+        z-index: 9;
+    }
+}
+
+body.carer_profile {
+    header.menu-header.new-usersignup-header {
+        @include breakpoint ($phone-only) {
+            display: none;
+        }
+    }
+}
+
+// Border of the selected radio button should also convert to blue
+.hourly-perday-wrapper label.radio-label.empty-field.active p.regular-font::before {
+    border-color: $primary-600;
+}
+
+// Input field is not active after putting in the data 
+.input__field-wrapper.reducepadding.other__input:focus input, .input__field-wrapper.reducepadding.other__input:focus-within input {
+    color: $primary-600;
+    font-weight: 760;
+} 
+
+// Wrong shade of blue for selected day
+.answer__selection .empty-field.active .regular-font span{
+    color: $primary-600;
+    font-weight: 760;
+}
+
+// Gap issues between items in “What next?” section.
+.onboarding-cards-wrap .onboarding-cards__what-next-card {
+    align-content: start;
+}
+
+// The cross icon is not vertically center aligned
+.input__field-wrapper.reducepadding.other__input span.dropdown-close svg{
+    display: flex;
+}
+
+// modal css
+@include breakpoint ($phone-only) {
+    div.modal.show {
+        visibility: visible;
+        display: flex !important;
+    }
+    div.modal {
+        overflow: visible;
+        visibility: hidden;
+        display: flex !important;
+    }
+}
+
+.conditional-experience-section .answer-item .other-experience input {
+    background: transparent;
+    border: 0px none!important;
+    box-shadow: none!important;
+    outline: unset!important;
+}
+.conditional-experience-section .answer-item .other-experience:hover, 
+.conditional-experience-section .answer-item .other-experience:focus, 
+.conditional-experience-section .answer-item .other-experience:focus-within {
+    background: #F5F5FB;
+    //box-shadow: 0px 1px 2px rgba(23, 25, 74, 0.05);
+    outline: 2px solid rgba(23, 25, 74, 0.05);
+    border: 1px solid #A2A5E4;
+
+    input {
+        color: $primary-600;
+        background: transparent;
+    }
+}
+
+body.custom_client_register {
+    .form__main.signup-to-send-message__form {
+        flex: 0 0 auto;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+/*
+.language-dropdown .form__input-group:focus .dropdown-menu, .language-dropdown .form__input-group:focus-within .dropdown-menu {
+	display: flex ;
+}*/
+
+.language-dropdown .form__input-group .dropdown-menu.show, .language-dropdown .form__input-group .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 
+body .language-dropdown .form__input-group .dropdown-menu .dropdown-item {
+    padding: 0 !important;
+    label{
+        padding: 8px 16px 8px 46px !important;
+        width: 100%;
+        &::before {
+            margin-left: 16px;
+        }
+    }
+}
+
+/*
+.language-dropdown .dropdown:focus ~ .dropdown-menu, .language-dropdown .dropdown-menu:hover, .language-dropdown .dropdown-menu:focus {
+	display: flex ;
+} */
+
+body.carer_profile header {
+    display: none;
+}

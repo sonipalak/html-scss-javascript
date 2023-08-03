@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorised Pay</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navigation job-posting-nav"> 
+            <div class="nav-logo">
+                <a href="#" tabindex="-1" aria-label="Curam Care Logo">
+                    <svg role="img" aria-label="Curam Care Logo" class="logo-desktop" width="97" height="28" viewBox="0 0 97 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.0034 14.816C11.7482 14.816 9.91577 12.9836 9.91577 10.7283C9.91577 8.47303 11.7482 6.64062 14.0034 6.64062C16.2587 6.64062 18.0911 8.47303 18.0911 10.7283C18.0911 12.9836 16.2587 14.816 14.0034 14.816Z" fill="#4248C7"/>
+                        <path d="M14.0032 17.2673C10.3874 17.2673 7.46416 14.3379 7.46416 10.7283C7.46416 7.11251 10.3936 4.18924 14.0032 4.18924C15.8724 4.18924 17.5577 4.97368 18.7528 6.23001C19.4024 6.91027 20.432 7.05735 21.247 6.58546C22.3869 5.92972 22.6259 4.37309 21.7189 3.41705C19.7823 1.37628 17.0429 0.101562 14.0032 0.101562C8.13216 0.101562 3.37036 4.86337 3.37036 10.7344C3.37036 16.6055 8.13216 21.3673 14.0032 21.3673C17 21.3673 19.7088 20.1232 21.6393 18.1315C22.5647 17.1693 22.3563 15.6004 21.198 14.9324C20.3891 14.4666 19.3595 14.6015 18.7099 15.2756C17.5271 16.5013 15.854 17.2673 14.0032 17.2673Z" fill="#4248C7"/>
+                        <path d="M14.0033 27.9005C19.525 27.9005 24.4339 25.2959 27.5778 21.245C28.3377 20.2645 28.062 18.8427 26.9834 18.2176C26.1009 17.7089 24.9732 17.9234 24.3481 18.7324C21.9519 21.8211 18.2135 23.8067 14.0033 23.8067C9.79306 23.8067 6.04858 21.8211 3.65849 18.7324C3.03339 17.9234 1.90575 17.7089 1.02326 18.2176C-0.0492218 18.8366 -0.331131 20.2645 0.428797 21.245C3.57269 25.2959 8.48158 27.9005 14.0033 27.9005Z" fill="#4248C7"/>
+                        <path d="M42.892 11.066C42.5794 10.0855 42.034 9.31942 41.2557 8.78624C40.4774 8.24694 39.5459 7.97729 38.4734 7.97729C37.6767 7.97729 36.9535 8.12437 36.31 8.41241C35.6604 8.70044 35.115 9.10492 34.6615 9.63197C34.208 10.1529 33.8587 10.7841 33.6074 11.5257C33.3561 12.2672 33.2336 13.0884 33.2336 13.9954C33.2336 14.9147 33.3623 15.7482 33.6196 16.4897C33.877 17.2312 34.2325 17.8563 34.686 18.3711C35.1395 18.8859 35.6911 19.2781 36.3345 19.5539C36.9842 19.8297 37.6889 19.9645 38.455 19.9645C39.5765 19.9645 40.5632 19.6949 41.4028 19.1556C42.2424 18.6163 42.8307 17.9054 43.1555 17.0167L45.8949 18.1873C45.3005 19.652 44.3444 20.7919 43.0146 21.607C41.6908 22.4159 40.1587 22.8265 38.4305 22.8265C37.2109 22.8265 36.0955 22.6181 35.0843 22.1953C34.067 21.7724 33.2029 21.1841 32.4736 20.418C31.7505 19.652 31.1867 18.7266 30.7883 17.6418C30.39 16.5571 30.1938 15.3621 30.1938 14.0506C30.1938 12.7268 30.3961 11.5134 30.8006 10.4225C31.205 9.33168 31.7689 8.39402 32.4981 7.61571C33.2213 6.8374 34.0915 6.23068 35.1089 5.80169C36.1201 5.3727 37.2416 5.1582 38.455 5.1582C40.2629 5.1582 41.8195 5.61784 43.1126 6.5371C44.4057 7.45637 45.2637 8.65755 45.6866 10.1406L42.892 11.066Z" fill="#212121"/>
+                        <path d="M55.1979 22.539C55.106 22.2142 55.0324 21.7852 54.9895 21.252C54.6647 21.7668 54.1989 22.159 53.5984 22.4348C52.9978 22.7106 52.3236 22.8454 51.576 22.8454C50.2645 22.8454 49.143 22.4716 48.2053 21.7239C47.286 20.9762 46.8264 19.7322 46.8264 18.0039V10.9746H49.5903V17.483C49.5903 18.5739 49.8477 19.3338 50.3687 19.7505C50.9018 20.155 51.4963 20.3573 52.1582 20.3573C52.8936 20.3573 53.5432 20.1244 54.107 19.6525C54.6708 19.1561 54.9527 18.4023 54.9527 17.4033V10.9991H57.7167V20.4063C57.7167 20.7188 57.7412 21.0865 57.7841 21.5155C57.8331 21.9445 57.8883 22.2816 57.9496 22.5329H55.1979V22.539Z" fill="#212121"/>
+                        <path d="M65.5059 10.834C66.0207 10.834 66.4742 10.8891 66.8603 10.9995V13.5489C66.4374 13.4386 66.0084 13.3834 65.5733 13.3834C64.5927 13.3834 63.8267 13.6898 63.2935 14.2966C62.7542 14.9033 62.4846 15.749 62.4846 16.8215V22.5332H59.6777V10.9995H62.2517L62.4171 12.3538C62.65 11.8574 63.0484 11.4775 63.6122 11.2201C64.1699 10.9627 64.8011 10.834 65.5059 10.834Z" fill="#212121"/>
+                        <path d="M75.0848 22.5376C75.0051 22.2128 74.9438 21.7716 74.8948 21.2261C74.57 21.7103 74.1042 22.1025 73.5036 22.3967C72.903 22.6908 72.1799 22.844 71.3403 22.844C70.0778 22.844 69.0605 22.5131 68.3006 21.8512C67.5345 21.1894 67.1545 20.2701 67.1545 19.0996C67.1545 17.9597 67.5284 17.0772 68.276 16.4459C69.0237 15.8147 70.0533 15.496 71.3648 15.496H74.8274V15.0487C74.8274 14.301 74.6129 13.7556 74.1839 13.4124C73.7549 13.0692 73.1665 12.8976 72.4189 12.8976C71.0767 12.8976 70.1085 13.4614 69.514 14.5829L67.5039 13.4124C68.0003 12.4625 68.6867 11.7638 69.563 11.3164C70.4394 10.8691 71.4322 10.6484 72.5598 10.6484C74.0123 10.6484 75.2073 11.0223 76.1388 11.7699C77.0765 12.5176 77.5423 13.7372 77.5423 15.4225V20.0066C77.5423 21.3181 77.6097 22.1577 77.7506 22.5315H75.0848V22.5376ZM74.8519 17.4081H71.996C71.3403 17.4081 70.8377 17.5552 70.4884 17.8555C70.1391 18.1497 69.9614 18.5603 69.9614 19.0751C69.9614 19.6205 70.1452 20.0372 70.5129 20.313C70.8806 20.5949 71.3954 20.7359 72.0696 20.7359C72.8356 20.7359 73.4914 20.4907 74.0368 20.0004C74.5822 19.5102 74.858 18.7319 74.858 17.6716V17.4081H74.8519Z" fill="#212121"/>
+                        <path d="M97.0001 15.1848V22.5328H94.3036V15.6077C94.3036 14.7987 94.0952 14.1675 93.6846 13.7263C93.274 13.2789 92.7163 13.0583 92.0115 13.0583C91.2639 13.0583 90.6633 13.3034 90.2098 13.7814C89.7563 14.2656 89.5295 14.9581 89.5295 15.8651V22.5328H86.8146V15.6077C86.8146 14.7987 86.6124 14.1675 86.2079 13.7263C85.8034 13.2789 85.2457 13.0583 84.5471 13.0583C83.7994 13.0583 83.1927 13.3034 82.733 13.7814C82.2734 14.2656 82.0405 14.9581 82.0405 15.8651V22.5328H79.2766V10.9991H81.8506L81.9425 12.0961C82.6105 11.1155 83.7075 10.6191 85.2212 10.6191C86.1098 10.6191 86.8759 10.803 87.5132 11.1707C88.1506 11.5384 88.647 12.0716 88.9902 12.7764C89.2721 12.1084 89.7379 11.5813 90.3814 11.1952C91.031 10.8153 91.8032 10.6191 92.7102 10.6191C94.0217 10.6191 95.0635 11.0175 95.8357 11.8142C96.614 12.6109 97.0001 13.7385 97.0001 15.1848Z" fill="#212121"/>
+                    </svg>
+                </a>
+                <a href="who-care.html" tabindex="-1" class="backarrow-mob " aria-hidden="true">
+                    <svg role="img" aria-label="Back" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="14.4414" y="6.05908" width="1.8" height="8.51599" rx="0.9" transform="rotate(46.0576 14.4414 6.05908)" fill="#494FC9"/>
+                        <rect width="1.8" height="8.51599" rx="0.9" transform="matrix(-0.693934 0.720038 0.720038 0.693934 9.55859 10.7354)" fill="#494FC9"/>
+                    </svg>             
+                </a>
+            </div>
+            <div class="nav-link-list">
+                <div class="progress-bar">
+                    <div id="postcode-form" class="progress-chunk fill"></div>
+                    <div id="whocare-form" class="progress-chunk fill"></div>
+                    <div id="helpneeded-form" class="progress-chunk"></div>
+                    <div id="carepreference-form" class="progress-chunk"></div>
+                    <div id="typeofcarer-form" class="progress-chunk"></div>
+                    <div id="hourly-duration-form" class="progress-chunk"></div>
+                    <div id="hourly-when-start-form" class="progress-chunk"></div>
+                    <div id="hours-per-day-form" class="progress-chunk"></div>
+                </div>
+            </div>
+            <div class="nav-btn"></div>
+        </nav>
+    </header>
+
+    <main class="onboarding-bg">
+        <div id="job-posting" class="main-container jobposting-flow funding-flow">
+            <div class="left-panel"></div>
+
+            <div class="center-content-area medium-center-sec-padding ">
+                <div class="header__title title-padding">
+                    <h1 class="h1-style title-color font-style__regular" id="whocarefor">Are you <span class="font-style__bold">authorised to pay</span> for the care?</h1>
+                </div>
+                <div class="form__main">
+                    <div class="form__body">
+                        <div class="location whocare answer__selection d-grid" role="radiogroup" aria-labelledby="whocarefor" aria-label="Who is the care for?">
+                            <div class="radiobtn authorised-pay__radiobtn-group">
+                                <div class="input__field-wrapper hideradiogroup">
+                                    <label for="yes" role="radio" aria-checked="false" tabindex="0">
+                                        <input type="radio" id="yes" name="authorisedpay" role="radio" value="yes" class="radiocheckedauthorisedpay" tabindex="-1" aria-hidden="true">
+                                        <svg class="normal-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.59863 17.8414C1.849 20.2128 3.75866 22.1227 6.12876 22.3836C7.76176 22.5634 9.43651 22.7143 11.1429 22.7143C12.8493 22.7143 14.5241 22.5634 16.1571 22.3836C18.5272 22.1227 20.4367 20.2128 20.6872 17.8414C20.8586 16.2181 21.0001 14.5533 21.0001 12.8571C21.0001 11.161 20.8586 9.49618 20.6872 7.87277C20.4367 5.50154 18.5272 3.59162 16.1571 3.33062C14.5241 3.15081 12.8493 3 11.1429 3C9.43651 3 7.76176 3.15081 6.12876 3.33062C3.75866 3.59162 1.849 5.50154 1.59862 7.87277C1.42721 9.49618 1.28577 11.161 1.28577 12.8571C1.28577 14.5533 1.42721 16.2181 1.59863 17.8414Z" fill="#E0E1E6"/>
+                                            <path d="M14.2828 3.1453C13.25 3.05815 12.2026 3 11.1429 3C9.43651 3 7.76176 3.15081 6.12876 3.33062C3.75866 3.59162 1.849 5.50154 1.59862 7.87277C1.42721 9.49618 1.28577 11.161 1.28577 12.8571C1.28577 14.5533 1.42721 16.2181 1.59863 17.8414C1.849 20.2128 3.75866 22.1227 6.12876 22.3836C7.76176 22.5634 9.43651 22.7143 11.1429 22.7143C12.8493 22.7143 14.5241 22.5634 16.1571 22.3836C18.5272 22.1227 20.4367 20.2128 20.6872 17.8414C20.8586 16.2181 21.0001 14.5533 21.0001 12.8571C21.0001 11.5877 20.9209 10.3358 20.8091 9.10572" stroke="#676779" stroke-width="1.71429" stroke-linecap="round"/>
+                                            <path d="M6.85718 11.1427L11.8442 16.2856C14.1909 9.54451 16.1453 6.58645 20.5715 2.57129" stroke="#676779" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg class="active-svg" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.59863 17.8824C1.849 20.2538 3.75866 22.1637 6.12876 22.4246C7.76176 22.6044 9.43651 22.7553 11.1429 22.7553C12.8493 22.7553 14.5241 22.6044 16.1571 22.4246C18.5272 22.1637 20.4367 20.2538 20.6872 17.8824C20.8586 16.2591 21.0001 14.5943 21.0001 12.8982C21.0001 11.202 20.8586 9.5372 20.6872 7.91379C20.4367 5.54255 18.5272 3.63263 16.1571 3.37163C14.5241 3.19182 12.8493 3.04102 11.1429 3.04102C9.43651 3.04102 7.76176 3.19182 6.12876 3.37163C3.75866 3.63263 1.849 5.54255 1.59862 7.91379C1.42721 9.5372 1.28577 11.202 1.28577 12.8982C1.28577 14.5943 1.42721 16.2591 1.59863 17.8824Z" fill="#D7E0FF"/>
+                                            <path d="M14.2828 3.18632C13.25 3.09916 12.2026 3.04102 11.1429 3.04102C9.43651 3.04102 7.76176 3.19182 6.12876 3.37163C3.75866 3.63263 1.849 5.54255 1.59862 7.91379C1.42721 9.5372 1.28577 11.202 1.28577 12.8982C1.28577 14.5943 1.42721 16.2591 1.59863 17.8824C1.849 20.2538 3.75866 22.1637 6.12876 22.4246C7.76176 22.6044 9.43651 22.7553 11.1429 22.7553C12.8493 22.7553 14.5241 22.6044 16.1571 22.4246C18.5272 22.1637 20.4367 20.2538 20.6872 17.8824C20.8586 16.2591 21.0001 14.5943 21.0001 12.8982C21.0001 11.6287 20.9209 10.3768 20.8091 9.14674" stroke="#494FC9" stroke-width="1.71429" stroke-linecap="round"/>
+                                            <path d="M6.85718 11.1837L11.8442 16.3266C14.1909 9.58552 16.1453 6.62747 20.5715 2.6123" stroke="#494FC9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Yes</span>
+                                        <svg role="graphics-symbol" aria-label="Next" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hoverchange">
+                                            <rect width="1.8" height="8.51599" rx="0.9" transform="matrix(-0.693934 0.720038 0.720038 0.693934 9.55872 6.05908)" fill="#616161"/>
+                                            <rect x="14.4414" y="10.7354" width="1.8" height="8.51599" rx="0.9" transform="rotate(46.0576 14.4414 10.7354)" fill="#616161"/>
+                                        </svg>
+                                    </label>
+                                </div>
+    
+                                <div class="input__field-wrapper hideradiogroup">
+                                    <label for="no" role="radio" aria-checked="false" tabindex="0">
+                                        <input type="radio" id="no" name="authorisedpay" role="radio" value="no" class="radiocheckedauthorisedpay" tabindex="-1"  aria-hidden="true">
+                                        <svg class="normal-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.2828 2.1453C14.25 2.05815 13.2026 2 12.1429 2C10.4365 2 8.76176 2.15081 7.12876 2.33062C4.75866 2.59162 2.849 4.50154 2.59862 6.87277C2.42721 8.49618 2.28577 10.161 2.28577 11.8571C2.28577 13.5533 2.42721 15.2181 2.59863 16.8414C2.849 19.2128 4.75866 21.1227 7.12876 21.3836C8.76176 21.5634 10.4365 21.7143 12.1429 21.7143C13.8493 21.7143 15.5241 21.5634 17.1571 21.3836C19.5272 21.1227 21.4367 19.2128 21.6872 16.8414C21.8586 15.2181 22.0001 13.5533 22.0001 11.8571C22.0001 10.5877 21.9209 9.33582 21.8091 8.10572" fill="#E0E1E6"/>
+                                            <path d="M15.2828 2.1453C14.25 2.05815 13.2026 2 12.1429 2C10.4365 2 8.76176 2.15081 7.12876 2.33062C4.75866 2.59162 2.849 4.50154 2.59862 6.87277C2.42721 8.49618 2.28577 10.161 2.28577 11.8571C2.28577 13.5533 2.42721 15.2181 2.59863 16.8414C2.849 19.2128 4.75866 21.1227 7.12876 21.3836C8.76176 21.5634 10.4365 21.7143 12.1429 21.7143C13.8493 21.7143 15.5241 21.5634 17.1571 21.3836C19.5272 21.1227 21.4367 19.2128 21.6872 16.8414C21.8586 15.2181 22.0001 13.5533 22.0001 11.8571C22.0001 10.5877 21.9209 9.33582 21.8091 8.10572" stroke="#676779" stroke-width="1.71429" stroke-linecap="round"/>
+                                            <path d="M19.3784 4.97021L8.29541 15.6876" stroke="#676779" stroke-width="1.71" stroke-linecap="round"/>
+                                            <path d="M15.8283 15.6877L8.29541 8.15479" stroke="#676779" stroke-width="1.71" stroke-linecap="round"/>
+                                        </svg>
+                                        <svg class="active-svg" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.2828 3.18632C13.25 3.09916 12.2026 3.04102 11.1429 3.04102C9.43651 3.04102 7.76176 3.19182 6.12876 3.37163C3.75866 3.63263 1.849 5.54255 1.59862 7.91379C1.42721 9.5372 1.28577 11.202 1.28577 12.8982C1.28577 14.5943 1.42721 16.2591 1.59863 17.8824C1.849 20.2538 3.75866 22.1637 6.12876 22.4246C7.76176 22.6044 9.43651 22.7553 11.1429 22.7553C12.8493 22.7553 14.5241 22.6044 16.1571 22.4246C18.5272 22.1637 20.4367 20.2538 20.6872 17.8824C20.8586 16.2591 21.0001 14.5943 21.0001 12.8982C21.0001 11.6287 20.9209 10.3768 20.8091 9.14674" fill="#D7E0FF"/>
+                                            <path d="M14.2828 3.18632C13.25 3.09916 12.2026 3.04102 11.1429 3.04102C9.43651 3.04102 7.76176 3.19182 6.12876 3.37163C3.75866 3.63263 1.849 5.54255 1.59862 7.91379C1.42721 9.5372 1.28577 11.202 1.28577 12.8982C1.28577 14.5943 1.42721 16.2591 1.59863 17.8824C1.849 20.2538 3.75866 22.1637 6.12876 22.4246C7.76176 22.6044 9.43651 22.7553 11.1429 22.7553C12.8493 22.7553 14.5241 22.6044 16.1571 22.4246C18.5272 22.1637 20.4367 20.2538 20.6872 17.8824C20.8586 16.2591 21.0001 14.5943 21.0001 12.8982C21.0001 11.6287 20.9209 10.3768 20.8091 9.14674" stroke="#494FC9" stroke-width="1.71429" stroke-linecap="round"/>
+                                            <path d="M18.2579 5.86328L7.17493 16.5807" stroke="#494FC9" stroke-width="1.71" stroke-linecap="round"/>
+                                            <path d="M14.7078 16.5807L7.17493 9.04785" stroke="#494FC9" stroke-width="1.71" stroke-linecap="round"/>
+                                        </svg>
+                                        <span>No</span>
+                                        <svg role="graphics-symbol" aria-label="Next" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hoverchange">
+                                            <rect width="1.8" height="8.51599" rx="0.9" transform="matrix(-0.693934 0.720038 0.720038 0.693934 9.55872 6.05908)" fill="#616161"/>
+                                            <rect x="14.4414" y="10.7354" width="1.8" height="8.51599" rx="0.9" transform="rotate(46.0576 14.4414 10.7354)" fill="#616161"/>
+                                        </svg>
+                                    </label>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="action-buttons footer-action-btn">
+                    <a href="who-care.html#back" id="backBtn" class="ghost-btn" aria-label="Back">
+                        <svg role="graphics-symbol" aria-label="Back" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.88316 12L20.1168 12" stroke="#4248C7" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.7336 5.14966C7.72795 7.61218 6.22624 9.11372 3.88315 12.0001C6.22624 14.8865 7.72795 16.388 10.7336 18.8506" stroke="#4248C7" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                
+                        <span>Back</span> 
+                    </a>
+                    <a href="#" id="nextBtn" class="btn primary-button disabledbtn" aria-hidden="true">
+                        <span>Next </span>
+                        <svg role="graphics-symbol" aria-label="Next" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.1168 12L3.88318 12" stroke="#ffffff" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2664 5.14966C16.272 7.61218 17.7738 9.11372 20.1168 12.0001C17.7738 14.8865 16.272 16.388 13.2664 18.8506" stroke="#ffffff" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
+                    </a>
+                </div>
+            </div>
+
+            <div class="right-panel"></div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+
+    <div id="confirmmodalpopup" class="modal newuserpagemodal changeratemodalcus modifyrate funding-flow__modal" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <!-- Modal content -->
+        <div class="modal-content large-modal">
+            <div class="modal-header ">
+                <h2 class="modal-title h3-style font-style__bold" id="confirmModalLabel">Thank you</h2>
+                <span class="close" aria-label="Close">
+                    <svg aria-label="Graphics Symbol" role="graphics-symbol" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3241_6754_112)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#9E9E9E"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_3241_6754_112">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg> 
+                </span>
+            </div>
+            
+            <div class="modal-body">
+                <div class="confirm-section modal-body__section-main">
+                    <p class="regular-font confirm-text">Care on Curam is organised and paid for online through the platform. We cannot facilitate any other sort of payments. </p>
+                    <p class="regular-font confirm-text">Therefore, the person paying for the care must register on <a href="https://www.curamcare.com/">www.curamcare.com</a> and agree to our terms and conditions. </p>
+                    <div class="confirm-footer__text">
+                        <span>Best,</span>
+                        <span>The Curam team</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.curamcare.com/" class="btn primary-button backbtn" >
+                    Back to home                   
+                </a>
+            </div>
+        </div>  
+    </div>
+    <div id="callbackmodalpopup" class="modal newuserpagemodal changeratemodalcus modifyrate funding-flow__modal" aria-labelledby="callbackModalLabel" aria-hidden="true">
+        <div class="modal__overlay"></div>
+        <!-- Modal content -->
+        <div class="modal-content large-modal">
+            <div class="modal-header ">
+                <h2 class="modal-title h3-style font-style__bold" id="callbackModalLabel">Request callback</h2>
+                <span class="close" aria-label="Close">
+                    <svg aria-label="Graphics Symbol" role="graphics-symbol" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3241_6754_11)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#9E9E9E"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_3241_6754_11">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg> 
+                </span>
+            </div>
+            
+            <div class="modal-body">
+                <div class="confirm-section modal-body__section-main">
+                    <p class="regular-font confirm-text">Since you are not authorised to pay for the care of your friend, please request a callback from us to discuss and take it forward.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn primary-button backbtn">
+                    Request to callback              
+                </a>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>

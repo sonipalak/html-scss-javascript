@@ -1,0 +1,56 @@
+// checkbox css
+
+.checkbox-option {
+    position: absolute !important; 
+    clip: rect(1px, 1px, 1px, 1px); 
+    padding: 0 !important; 
+    border: 0 !important; 
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+}
+
+
+label.checkbox-label{
+    display: grid;
+   position: relative;
+   padding-left: 42px;
+   gap: 8px;
+    &:before {
+        content: ''; 
+        position: absolute;
+        left: 0;
+        width: 24px; 
+        height: 24px; 
+        border: 1px solid #9E9E9E; 
+        box-shadow: 0px 1px 2px rgba(23, 25, 74, 0.05);
+        display: inline-block; 
+        border-radius: 4px;
+    }
+    span.subtitle{
+        color: $grey-900;
+    }
+    span.help-text{
+        color: $grey-500;
+    }
+}
+
+input[type="checkbox"]:checked ~ label.checkbox-label:before {
+    background: $primary-600 no-repeat center; 
+    background-size: 24px 24px; 
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNCAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4Ljg4MjggNy41NTAwMkMxOC42MDY4IDcuMjY4OTYgMTguMTU1MyA3LjI2NDk0IDE3Ljg3NDQgNy41NDEwNEw5Ljk1Mjc1IDE1LjMyNzdMNi41MTIzNiAxMS45MjI4QzYuMjMxODYgMTEuNjQ1MiA1Ljc3OTQxIDExLjY0NzcgNS41MDE5NCAxMS45MjgzQzUuMjI0NjggMTIuMjA4NyA1LjIyNzExIDEyLjY2MDggNS41MDczNyAxMi45MzgyTDkuNDQ4NCAxNi44Mzk0QzkuNTgyMSAxNi45NzEzIDkuNzYyMzkgMTcuMDQ1MyA5Ljk1MDI1IDE3LjA0NTNDMTAuMTM4MSAxNy4wNDUzIDEwLjMxODQgMTYuOTcxMyAxMC40NTIxIDE2LjgzOTRMMTguODczOSA4LjU1NzY5QzE5LjE1NDQgOC4yODE4MSAxOS4xNTg0IDcuODMwNzkgMTguODgyOCA3LjU1MDAyWiIgZmlsbD0iI0Q3RTBGRiIvPgo8L3N2Zz4K);
+}
+
+input[type="checkbox"]:focus ~ label.checkbox-label:before {
+    border: 1px solid #A2A5E4;
+    box-shadow: 0px 0px 0px 4px #D7D8F3;
+}
+
+input[type="checkbox"]:hover ~ label.checkbox-label:before {
+    border: 1px solid #A2A5E4;
+}
+
+input[type="checkbox"]:focus ~ label.checkbox-label span.subtitle,
+input[type="checkbox"]:checked ~ label.checkbox-label span.subtitle {
+    color: $primary-800;
+}
