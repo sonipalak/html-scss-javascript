@@ -1,0 +1,207 @@
+section#download-app-section{
+    margin-top: 50px;
+    padding-bottom: 0;
+        @include breakpoint($phone-only) {
+            margin-top: 0px;
+            padding: 0px 24px 44px;
+        }
+        @include breakpoint ($tablet-portrait) {
+            margin-top: 0px;
+            padding: 0px 24px 44px;
+        }
+        @include breakpoint ($tablet-landscape) {
+            margin-top: 25px;
+            padding-top: 50px;
+        }
+    
+    .download-app-section__main-container {
+        width: 100%;
+        background-color: $primary-100;
+        @include breakpoint($phone-only){
+            background-color: transparent;
+        }
+        @include breakpoint ($tablet-portrait) {
+            background-color: transparent;
+        }
+
+        .app-section__main-container-content {
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 64px;
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;
+            position: relative;
+            // margin-top: -30%;
+            /* padding: 65px; */
+            // padding-top: 65px;
+            // padding-bottom: 77px;  
+            
+            @include breakpoint ($tablet-portrait) {
+                gap: 24px;
+                grid-template-columns: 1fr;
+            }
+
+            // @include breakpoint($small-portrait) {
+            //     grid-template-columns: 1fr 1fr;
+            // }
+            @include breakpoint($phone-only) {
+                gap: 24px;
+                grid-template-columns: 1fr;
+                // padding-top: 21px;
+                // padding-bottom: 21px;
+            }
+
+            p {
+                color: $grey-600;
+
+                @include breakpoint($phone-only){
+                   font-size: 14px;
+                   font-weight: 640;
+                   text-align: center;
+                }
+                @include breakpoint($tablet-portrait){
+                    text-align: center;
+                 }
+            }
+            .app-section__main-container-content-img {
+                position: relative;
+                display: flex;
+                gap: 0;
+                justify-content: flex-start;
+                margin-top: -200px;
+                width: 100%;
+                height: 100%;
+                align-items: flex-end;
+                @include breakpoint($phone-only){
+                    margin-top: 0px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    justify-content: center;
+                }
+                @include breakpoint ($tablet-portrait) {
+                    margin-top: 0px;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-position: center 50px;
+                    object-fit: contain;
+                    &.phone-app__img {
+                        display: none;
+                        @include breakpoint($phone-only){
+                            display: block;
+                            max-width: 267px;
+                            height: auto;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                    &.portrait-app__img {
+                        display: none;
+                        @include breakpoint($tablet-portrait){
+                            display: block;
+                            max-width: 435px;
+                            margin: auto;
+                        }
+                    }
+                    &.desktop-app__img {
+                        max-width: 440px;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        @include breakpoint($phone-only){
+                            display: none;
+                        }
+                        @include breakpoint($tablet-portrait){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .app-section__main-container-content-details {
+            display: grid;
+            gap: 16px;
+            padding-top: 64px;
+            padding-bottom: 64px;
+
+            @include breakpoint($phone-only) {
+                padding-top: 0px;
+                padding-bottom: 0px;
+                justify-items: center;
+                gap: 24px;
+            }
+            @include breakpoint ($tablet-portrait) {
+                padding-top: 0px;
+                padding-bottom: 0px;
+                justify-items: center;
+                gap: 24px;
+            }
+
+            @include breakpoint($small-portrait) {
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+
+            @include breakpoint($small-landscape) {
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+        }
+
+        .app-section__main-container-content-details-header {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0;
+            @include breakpoint($phone-only) {
+                align-items: center;
+                gap: 24px;
+            }
+            @include breakpoint ($tablet-portrait) {
+                align-items: center;
+                gap: 24px;
+            }
+        }
+        
+        .download-app__button {
+            padding: 12px 0px;
+            gap: 15px;
+            display: flex;
+            @include breakpoint($phone-only) {
+                padding: 0px;
+                flex-direction: row-reverse;
+                max-width: 270px;
+            } 
+            @include breakpoint ($tablet-portrait) {
+                padding: 0px;
+                flex-direction: row-reverse;
+            }
+            a {
+                height: 48px;
+                width: auto;
+                @include breakpoint($phone-only) {
+                    height: 40px;
+                    width: auto;
+                }
+                @include breakpoint ($tablet-portrait) {
+                    height: 40px;
+                    width: auto;
+                }
+            }
+            img {
+                height: 48px;
+                width: auto;
+                @include breakpoint($phone-only) {
+                    height: 40px;
+                    width: auto;
+                } 
+                @include breakpoint ($tablet-portrait) {
+                    height: 40px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

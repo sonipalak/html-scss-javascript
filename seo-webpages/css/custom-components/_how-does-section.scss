@@ -1,0 +1,191 @@
+.content-area-right__how-does-section{
+    display: flex;
+    flex-direction: column;
+    .content-area-right__how-does-section-header-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .content-area-right__how-does-works-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        isolation: isolate;
+        @include breakpoint ($tablet-portrait) {
+            grid-template-columns: 1fr;
+        }
+        @include breakpoint ($phone-only) {
+            grid-template-columns: 1fr;
+        }
+        @include breakpoint ($small-landscape) {
+            grid-template-columns: 1fr;
+        }
+        .content-area-right__how-does-works-points-left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .content-area-right__how-does-works-points-btn {
+                padding: 12px;
+                gap: 18px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-weight: 690;
+                font-size: 17px;
+                line-height: 1.4;
+                letter-spacing: 0.012em;
+                color: $gray-800;
+                border: 1px solid $gray-200;
+                border-radius: 12px;
+                position: relative;
+                .content-area-right__how-does-works-points-icons {
+                    width: 32px;
+                    height: 32px;
+                }
+                &[data-state="active"]{
+                    background-color: $primary-100;
+                    color: $primary-600;
+                    border-color: $primary-100;
+                    svg.active-icon {
+                        display: block;
+                    } 
+                    svg.normal-icon {
+                        display: none;
+                    } 
+                    &::after {
+                        content: '';
+                        
+                        border-radius: 1px;
+                        position: absolute;
+                        width: 0; 
+                        height: 0; 
+                        top: calc(50% - 10px);
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        
+                        border-left: 10px solid $primary-100;
+                        right: -10px;
+                    }
+
+                }
+                svg.active-icon {
+                    display: none;
+                }
+                &:hover {
+                    background-color: $primary-50;
+                    color: $primary-600;
+                    border-color: $primary-50;
+                    svg.active-icon {
+                        display: block;
+                    } 
+                    svg.normal-icon {
+                        display: none;
+                    } 
+                } 
+                &:focus {
+                    background-color: $primary-50;
+                    color: $primary-600;
+                    box-shadow: 0px 0px 0px 2px $primary-400;
+                    svg.active-icon {
+                        display: block;
+                    } 
+                    svg.normal-icon {
+                        display: none;
+                    } 
+                }
+            }
+            @include breakpoint ($tablet-portrait) {
+                display: none;
+            }
+            @include breakpoint ($phone-only) {
+                display: none;
+            }
+            @include breakpoint ($small-landscape) {
+                display: none;
+            }
+        }
+    }
+    
+    .content-area-right__how-does-works-points-right {
+        @include breakpoint ($tablet-portrait) {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        @include breakpoint ($phone-only) {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        @include breakpoint ($small-landscape) {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .content-panel {
+            background: $primary-50;
+            gap: 28px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            
+            @include breakpoint ($tablet-portrait) {
+                display: flex !important;
+            }
+            @include breakpoint ($phone-only) {
+                display: flex !important;
+            }
+            @include breakpoint ($small-landscape) {
+                display: flex !important;
+            }
+            .content-panel-item {
+                display: none;
+                @include breakpoint ($tablet-portrait) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                @include breakpoint ($phone-only) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                @include breakpoint ($small-landscape) {
+                    display: flex !important;display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                span {
+                    font-weight: 690;
+                    font-size: 17px;      
+                    color: $gray-800;  
+                    letter-spacing: 0.012em;
+                    line-height:  1.4;    
+                }
+            }
+            .content-panel-detail {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include breakpoint ($not-desktop) {
+                    display: flex !important;
+                }
+            }
+        }
+        p {
+            font-weight: 630;
+            color: $gray-600;
+            a {
+                color: $gray-600;
+            }
+        }
+    }
+    &.overnight-how-section {
+        .content-area-body-right__how-section-right {
+            width: 163px;
+            height: 152px;
+            object-fit: cover;
+        }
+    }
+}

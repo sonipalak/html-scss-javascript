@@ -1,0 +1,127 @@
+
+section#advantages-section{
+    .advantages-section-wrap {
+        gap: 64px;
+        @include breakpoint ($phone-only) {
+            gap: 44px;
+        }
+    }
+    .advantages-section__title br{
+        @include breakpoint($phone-only){
+            display: none;
+        }
+    }
+    .advantages-section__content {
+        display: grid;
+        gap: 64px;
+        @include breakpoint ($phone-only) {
+            gap: 44px;
+        }
+    }
+    .advantages-section__content-details{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 64px;
+        @include breakpoint($tablet-portrait){
+            grid-template-columns: 1fr;
+        }
+
+        @include breakpoint($phone-only){
+            grid-template-columns: 1fr;
+            gap: 44px;
+        }
+
+        .advantages-section__content-details-content-items{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px 32px;
+            align-items: start;
+            @include breakpoint($tablet-portrait) {
+                gap: 44px;
+            }
+
+            @include breakpoint($phone-only){
+                gap: 44px 0px;
+            }
+
+            .why-curam-element  {
+                display: grid;
+                padding: 16px 0px;
+                gap: 12px;
+
+                &:nth-child(even){
+                    @include breakpoint($phone-only){
+                        padding: 16px 0px;
+                    } 
+                }
+
+                @include breakpoint($phone-only){
+                    padding: 16px 16px 16px 0px;
+                }
+
+                .why-curum-client__content{
+                    display: grid;
+                    gap: 12px;
+
+                    h2{
+                        color: $grey-800;
+                        font-size: 24px;
+                        font-weight: $font-760;
+                        line-height: 140%;
+
+                        @include breakpoint($small) {
+                            font-size: 17px;
+                        }
+                    }
+                    p{
+                        color: $grey-600;
+                        font-weight: 560;
+                        font-size: 17px;
+                        line-height: 140%;
+
+                        @include breakpoint($phone-only){
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .dialogue-group{
+            display: grid;
+            gap: 24px;
+            @include breakpoint ($tablet-portrait) {
+                display: none;
+            }
+
+            @include breakpoint($phone-only){
+                display: none;
+            }
+            .dialogue-tag{
+                padding: 14px 18px;
+                gap: 12px;
+                background-color: $primary-100;
+                border-radius: 50px;
+                width: fit-content;
+                transition: all 3s ease-in;
+
+                &:nth-child(2n + 1){
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+                &:nth-child(2n){
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+
+                .dialogue-tag-text{
+                    font-weight: 560;
+                    font-size: 17px;
+                    line-height: 140%;
+                }
+            }
+        }
+    }
+}

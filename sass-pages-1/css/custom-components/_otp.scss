@@ -1,0 +1,99 @@
+.otp-wrapper {
+    padding: 16px;
+    gap: 0px;
+
+    @include breakpoint($phone-only) {
+        padding: 16px 20px;
+    }
+    .main-form {
+        display: grid;
+        padding: 16px 0px;
+        gap: 44px;
+    }
+
+    .digit-group {
+        display: flex;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 28px;
+        justify-content: space-between;
+
+        input {
+            height: 75px;
+            width: 91px;
+            border-radius: 12px;
+            padding: 15px 16px 15px 16px;
+            font-weight: 520;
+            font-size: 32px;
+            letter-spacing: 0.012em;
+            line-height: 1.4;
+            color: #424242;
+            text-align: center;
+
+            &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                appearance: none;
+                margin: 0;
+            }
+            
+            @include breakpoint($phone-only) {
+                height: 60px;
+                width: 62.75px;
+                padding: 0px;
+            }
+
+            border: 1px solid $grays-300;
+            box-shadow: 0px 1px 2px $box-shadow-color;
+            border-radius: 12px;
+            outline: 0;
+        
+            &:hover {
+                border: 1px solid $primary-400;
+                box-shadow: 0px 0px 0px 1px $primary-200;
+            }
+            &:focus {
+                border: 1px solid $primary-400;
+                box-shadow: 0px 0px 0px 4px $primary-200;
+            }
+            &:disabled {
+                background-color: $grays-300;
+                color: $grays-900;
+                
+                &::placeholder {
+                    color: $grays-400;
+                }
+            }
+           
+        }
+    }
+    .otp-text__button {
+        display: flex;
+        justify-content: space-between;
+        p {
+            color: $grays-600;
+        }
+    }
+    .form__input-group {
+        .error-msg {
+            font-weight: 630;
+            font-size: 14px;
+            line-height: 1.4;
+            letter-spacing: 0.014em;
+            color : $negatives-600;
+        }
+        &.error {
+            .error-msg {
+                display: block;
+            }
+        }
+    }
+    .resendcode {
+        padding: 16px;
+        gap: 16px;
+        background: $primary-100;
+        border-radius: 12px;
+        display: none;
+        p {
+            color: $primary-600; 
+        }
+    }
+}

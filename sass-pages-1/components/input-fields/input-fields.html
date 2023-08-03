@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Curam - Landing Page</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+    <div class="form__input-group">
+        <div class="input__field-wrapper reducepadding other__input">
+            <div class="prefix-img">
+                <svg role="graphics-symbol" aria-label="Location Symbol" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="normalstate">
+                    <path d="M12.9902 21.902C15.1764 20.0074 20.2234 15.0354 20.2234 9.50914C20.2234 4.96743 16.5417 1.28564 12 1.28564C7.45828 1.28564 3.77649 4.96743 3.77649 9.50914C3.77649 15.0354 8.82355 20.0074 11.0098 21.902C11.5844 22.3998 12.4156 22.3998 12.9902 21.902Z" fill="#E5E5E5" stroke="#616161" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12 12.3946C13.8602 12.3946 15.3682 10.8866 15.3682 9.0264C15.3682 7.16619 13.8602 5.6582 12 5.6582C10.1398 5.6582 8.63184 7.16619 8.63184 9.0264C8.63184 10.8866 10.1398 12.3946 12 12.3946Z" fill="white" stroke="#616161" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg aria-hidden="true" aria-label="Location Symbol" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hoverstate">
+                    <g clip-path="url(#clip0_1416_99002)">
+                    <path d="M12.9902 21.943C15.1764 20.0484 20.2234 15.0764 20.2234 9.55016C20.2234 5.00845 16.5417 1.32666 12 1.32666C7.45828 1.32666 3.77649 5.00845 3.77649 9.55016C3.77649 15.0764 8.82355 20.0484 11.0098 21.943C11.5844 22.4408 12.4156 22.4408 12.9902 21.943Z" fill="#D7E0FF" stroke="#494FC9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12 12.4356C13.8602 12.4356 15.3682 10.9276 15.3682 9.06741C15.3682 7.20721 13.8602 5.69922 12 5.69922C10.1398 5.69922 8.63184 7.20721 8.63184 9.06741C8.63184 10.9276 10.1398 12.4356 12 12.4356Z" fill="white" stroke="#494FC9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1416_99002">
+                    <rect width="24" height="24" fill="white" transform="translate(0 0.0410156)"></rect>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <input id="phonenumber-field" aria-label="Enter postcode or area name" autocomplete="off" type="text" class="form-control__custom dropdown" oninput="getInputVal('postcode-form')" placeholder="Enter postcode or area name" aria-haspopup="true" readonly="readonly"> 
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li class="dropdown-item">SW10 0AA</li>
+                <li class="dropdown-item">SW10 0AB</li>
+                <li class="dropdown-item">SW10 AD</li>
+                <li class="dropdown-item">SW10 0AE</li>
+                <li class="dropdown-item">SW10 0AA</li>
+                <li class="dropdown-item">SW10 0AB</li>
+                <li class="dropdown-item">SW10 AD</li>
+                <li class="dropdown-item">SW10 0AE</li>
+            </ul>
+
+            <div class="postfix-img">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0728 18.2623C15.5545 18.2623 19.1876 14.6292 19.1876 10.1475C19.1876 5.66583 15.5545 2.03271 11.0728 2.03271C6.59113 2.03271 2.95801 5.66583 2.95801 10.1475C2.95801 14.6292 6.59113 18.2623 11.0728 18.2623Z" fill="#D7E0FF" stroke="#494FC9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.0419 21.9673L16.5437 16.7476" stroke="#494FC9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                                    
+            </div>
+        </div>
+        <p id="phonenumber-field__error-msg" class="error-msg">Please enter a valid postcode</p>
+    </div>
+</body>
+
+</html>

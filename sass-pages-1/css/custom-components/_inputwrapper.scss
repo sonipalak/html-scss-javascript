@@ -1,0 +1,115 @@
+.input__field-wrapper.reducepadding.other__input {
+    display: flex;
+    padding: 0px;
+    gap: 0px;
+    border: 1px solid $grays-300;
+    box-shadow: 0px 1px 2px $box-shadow-color;
+    border-radius: 12px;
+    outline: 0;
+    transition: all;
+    position: relative;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-duration: 200ms;
+    align-items: center;
+    background-color: $grays;
+
+    fieldset {
+        width: 100%;
+        border: 0px none;
+        text-align: left;
+
+        button {
+            position: relative;
+            text-align: left;
+            padding: 15px 16px !important;
+            font-weight: 520;
+            font-size: 15px;
+            letter-spacing: 0.014em;
+            line-height: 1.4;
+            color: #35353F;
+            font-family: "Manrope";
+            svg.postfix-img {
+                MARGIN: 0;
+                FLOAT: RIGHT;
+            }
+        }
+    }
+
+    div {
+        align-content: space-evenly;
+        padding: 14px 12px;
+        gap: 16px;
+        // border-radius: 12px;
+        display: grid;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        color: $grays-600;
+
+        &.prefix-text {
+            background-color: $grays-300;
+        }
+
+        &.prefix-img{
+            .hoverstate{
+                display: none;
+            }
+        }
+
+    }
+    input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        outline: 0;
+        padding-left: 0;
+        border-radius: 0px;
+    }
+
+    &:hover {
+        border: 1px solid $primary-400;
+        box-shadow: 0px 0px 0px 1px $primary-200;
+        input{
+            box-shadow: unset;
+            border: 0px none;
+        }
+
+        div {
+            &.prefix-img{
+                .hoverstate{
+                    display: block;
+                }
+                .normalstate{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &:focus,
+    &:focus-within {
+        box-shadow: 0px 0px 0px 4px $primary-200;
+        border: 1px solid $primary-400;
+        input{
+            box-shadow: unset;
+            border: 0px none;
+        }
+
+        div {
+            &.prefix-img{
+                .hoverstate{
+                    display: block;
+                }
+                .normalstate{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    
+    
+}
+
+.input__field-wrapper.noprefix-nopostfix input{
+    padding-left: 16px !important;
+}

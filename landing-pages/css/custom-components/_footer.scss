@@ -1,0 +1,346 @@
+@import '../custom-components/breakpoint/_custom-breakpoint.scss';
+
+footer {
+    background: $primary-800;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint($phone-only) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+    @include breakpoint ($tablet-portrait) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .footer__details {
+        gap: 64px;
+        display: grid;
+        position: relative;
+
+        .footer__nav-links{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 32px 0px 0px;
+            gap: 48px;
+            
+            @include breakpoint($medium) {
+                grid-template-columns: repeat(4, auto);
+            }
+
+            @include breakpoint($phone-only){
+                grid-template-columns: 1fr ;
+                padding: 0px;
+                gap: 16px;
+
+            }
+            @include breakpoint ($tablet-portrait) {
+                grid-template-columns: 1fr ;
+                padding: 0px;
+                gap: 16px;
+            }
+            @include breakpoint ($tablet-landscape) {
+                gap: 40px;
+            }
+
+            
+            .footer__nav-links-col{
+                display: grid;
+                gap: 32px;
+                align-items: start;
+                grid-auto-rows: min-content;
+
+                @include breakpoint($phone-only){
+                    // padding: 8px;
+                    gap: 0px;
+                    // border-bottom: 1px solid #494FC9;
+                }
+                @include breakpoint ($tablet-portrait) {
+                    gap: 0px;
+                }
+
+                .footer-nav-links__title{
+
+                    @include breakpoint($phone-only){
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 8px;
+                        // gap: 8px;
+                        border-bottom: 1px solid $primary-600;
+                    }
+                    @include breakpoint ($tablet-portrait) {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 8px;
+                        // gap: 8px;
+                        border-bottom: 1px solid $primary-600;
+                    }
+                    svg {
+                        display: none;
+
+                        @include breakpoint($phone-only){
+                            display: block;
+                        } 
+                        @include breakpoint ($tablet-portrait) {
+                            display: block;
+                        }
+                    }
+                }
+
+
+                .footer__nav-links-inner{
+                    flex-direction: column;
+                    gap: 13px;
+
+                    @include breakpoint($not-desktop){
+                        display: flex !important;
+                    }
+                    @include breakpoint($tablet-landscape){
+                        display: flex !important;
+                    }
+                    @include breakpoint($phone-only){
+                        display: none;
+                        padding: 16px 24px;
+        
+                    } 
+                    @include breakpoint ($tablet-portrait) {
+                        display: none;
+                        padding: 16px 24px;
+                    }
+
+                    ul.footer-navlinks__link {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                        display: grid;
+                        gap: 12px;
+                        a {
+                            color: $grey-100;
+                            font-weight: $font-560;
+                            font-size: 14px;
+                            outline-color: $primary-100;
+
+                            @include smooth-transition(200ms);
+
+                            &:hover {
+                                font-weight: 760;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        p.footer-nav-links__title{
+            color: $grey-100;
+            font-weight: $font-640;
+            svg {
+                @include smooth-transition(200ms);
+            }
+
+            @include breakpoint($phone-only){
+                font-size: 15px;
+
+                &.active {
+                    svg {
+                        transform: rotate(-180deg);
+                    }
+                }
+
+            }
+            @include breakpoint ($tablet-portrait) {
+                font-size: 15px;
+
+                &.active {
+                    svg {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+        .footer__contacts{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 0px;
+            gap: 108px;
+            color : $grey-100;
+
+            @include breakpoint($medium) {
+                grid-template-columns: repeat(2, auto);
+                gap: 64px;
+            }
+
+            @include breakpoint($phone-only){
+                grid-template-columns: 1fr ;
+                gap: 32px;
+            }
+            @include breakpoint ($tablet-portrait) {
+                grid-template-columns: 1fr ;
+                gap: 32px;
+            }
+            .footer-contact__logo{
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                justify-content: space-between;
+
+                .footer-contact__logo-item-detail{
+                   display: grid;
+                   gap : 4px;
+                   
+
+                   .review-text{
+                    font-size: 11px;
+                    font-weight: $font-400;
+                   }
+                }
+                .copyright-text{
+                    font-size : $font-small;
+                    font-weight: $font-560;
+
+                    @include breakpoint($phone-only){
+                        position: absolute;
+                        bottom: 0;
+                        text-align: center;
+                        display: block;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+                    @include breakpoint ($tablet-portrait) {
+                        position: absolute;
+                        bottom: 0;
+                        text-align: center;
+                        display: block;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+                }
+            }
+            
+            .footer-contact__logo-item{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+
+                @include breakpoint($phone-only){
+                    grid-template-columns: 1fr ;
+                    gap: 32px;
+                }
+                @include breakpoint ($tablet-portrait) {
+                    grid-template-columns: 1fr ;
+                    gap: 32px;
+                }
+                .trustpilot_widget {
+                    min-width: 115px;
+                }
+
+                .footer-contact__logo-item-detail{
+                    p{
+                        font-size : $font-small;
+                    }
+                }
+                .trustpilot-widget {
+                    @include breakpoint ($phone-only) {
+                        max-width: 113px;
+                        max-height: 85px;
+                    }
+                    @include breakpoint ($tablet-portrait) {
+                        width: 100%;
+                        max-height: 85px;
+                    }
+                    @include breakpoint ($tablet-landscape) {
+                        max-width: 113px;
+                        max-height: 85px;
+                    }
+                }
+            }
+
+            .footer-contact-__download-links{
+                display: flex;
+                gap: 16px;
+                flex-direction: column;
+                
+                .download-app__button{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 16px;
+                    @include breakpoint ($tablet-landscape) {
+                        flex-wrap: wrap;
+                    }
+
+                    a{
+                        // float: left;
+                        // padding: 10px;
+                        gap: 10px;
+
+                        img {
+                            height: 48px;
+                            width: auto;
+
+                            @include breakpoint($small) {
+                                height: 40px;
+                            }
+                        }
+                        
+                        
+                    }
+                }
+                @include breakpoint($phone-only){
+                    gap: 8px;
+                }
+                @include breakpoint ($tablet-portrait) {
+                    gap: 8px;
+                }
+            }
+
+            .footer-contact__links{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                @include breakpoint($phone-only){
+                    padding-bottom: 64px;
+                }
+                @include breakpoint ($tablet-portrait) {
+                    padding-bottom: 64px;
+                }
+
+                .footer-contact__links-contact-us{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                .footer-contact__links-social-media{
+                    gap: 16px;
+                    display: flex;
+
+                    @include breakpoint($phone-only){
+                        padding-top: 16px;
+                    }
+                    @include breakpoint ($tablet-portrait) {
+                        padding-top: 16px;
+                    }
+                }
+
+                .links-contact-us__details{
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    a {
+                        font-size: 14px;
+                        font-weight: $font-560;
+                        line-height: 140%;
+                        color: $grey-100;
+                    }
+                }
+            }
+
+            
+        }
+    }   
+}

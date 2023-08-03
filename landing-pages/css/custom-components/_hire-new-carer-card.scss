@@ -1,0 +1,128 @@
+.new-carer-card__group {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+    @include breakpoint ($tablet) {
+        grid-template-columns: 1fr; 
+    }
+    @include breakpoint ($tablet-landscape) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .new-carer-card__cell-element {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        padding: 24px;
+        gap: 24px; 
+        background-color: $primary-50; 
+        border-radius: 12px;
+        @include breakpoint ($phone-only) {
+            padding: 16px; 
+        }
+        &:nth-child(n+3){
+            @include breakpoint ($tablet-portrait) {
+                display: none;
+            }
+            @include breakpoint ($tablet-landscape) {
+                display: none;
+            }
+            @include breakpoint ($phone-only) {
+                display: none; 
+            }
+        }
+    
+        &:hover {
+            background-color: $primary-100; 
+        }
+        &:active,
+        &:visited {
+            background-color: $primary-300; 
+        }
+        &:focus {
+            background-color: $primary-50;
+            box-shadow:0px 0px 0px 4px $primary-400;
+            outline: 0;
+            -webkit-appearance: none;
+        }
+    
+        .new-carer-card-cell__header {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 12px;
+                @include breakpoint ($phone-only) {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+            .new-carer-card-cell__header-details {
+                display: grid;
+                grid-template-rows: auto auto;
+                align-content: start;
+                gap: 12px;
+                .new-carer-card-cell__name {
+                    color: $grey-800;
+                    font-size: 24px;
+                    font-weight: 760;
+                    line-height: 1.4;
+                    letter-spacing: 0em;
+                    margin: 0;
+                    @include breakpoint ($phone-only) {
+                        font-size: 20px;
+                    }
+                }
+                .new-carer-card-cell__details-experiance-icon {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    p.new-carer-card-cell__details-experiance-text {
+                        color: $grey-600;
+                    }
+                }
+            }
+        }
+        .new-carer-card-cell-tags {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            .small-tag {
+                pointer-events: none;
+            }
+        }
+        .new-carer-card-cell-content {
+            padding: 0px 0px 0px 12px;
+            border-left: 2px solid #FF732E;
+            display: flex;
+            p.new-carer-card-cell-content-text {
+                font-size: 16px;
+                font-weight: 520;
+                line-height: 1.4;
+                letter-spacing: 0;
+                color: $grey-600;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                @include breakpoint($phone-only) {
+                    font-size: 15px;
+                    -webkit-line-clamp: 3;
+                }
+                @include breakpoint ($tablet-landscape) {
+                    font-size: 15px;
+                }
+                a.new-carer-card-cell-content__link {
+                    color: $primary-600;
+                    text-decoration: underline;
+                    display: inline-block !important;
+                }
+            }
+        }
+        
+    }
+}

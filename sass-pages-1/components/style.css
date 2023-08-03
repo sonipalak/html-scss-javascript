@@ -1,0 +1,10 @@
+.tooltip-componanat .tooltip__circle-button {
+    width: auto;
+    max-width: 32px;
+    margin: auto;
+    display: block;
+    margin-top: 70px;
+}
+.tooltip-componanat {
+    padding-top: 50px;
+}

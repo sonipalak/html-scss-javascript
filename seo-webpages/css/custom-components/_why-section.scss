@@ -1,0 +1,182 @@
+
+.content-area-right__why-section {
+    display: flex;
+    flex-direction: column;
+    .why-section-content-heading {
+        &.element-hide-desk {
+            @include breakpoint ($tablet-portrait) {
+                display: none;
+            } 
+        }
+        &.element-hide-responsive {
+            @include breakpoint ($tablet-portrait) {
+                display: block;
+            }
+        }
+    }
+    .content-area-right__why-section-header {
+        .content-area-right__why-section-header-body {
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .content-area-right__why-section-content {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 84px;
+        &.live-in-care-seo-page__why-section {
+            gap: 32PX;
+        }
+        @include breakpoint ($tablet-landscape) {
+            gap: 44px;
+        }
+
+        @include breakpoint ($phone-only) {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        .why-section__left-img {
+            width: 150px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            &.hourly-seo-page-why-section__left-img {
+                border-radius: 200px 200px 0px 500px;
+            }
+            @include breakpoint ($tablet-landscape) {
+                width: 256px;
+            }
+            @include breakpoint ($tablet-portrait) {
+                width: 221px;
+            }
+            @include breakpoint ($phone-only) {
+                width: 335px;
+                height: 328px;
+            }
+            @include breakpoint ($small-landscape) {
+                width: 221px;
+                height: 100%;
+            }
+        }
+        .who-needs-24-hour__left-img {
+            width: 304px;
+            height: 355px;
+            object-fit: cover;
+            border-radius: 12px;
+            &.hourly-seo-page-why-section__left-img {
+                border-radius: 200px 200px 0px 500px;
+            }
+            @include breakpoint ($tablet-landscape) {
+                width: 256px;
+            }
+            @include breakpoint ($tablet-portrait) {
+                width: 221px;
+            }
+            @include breakpoint ($phone-only) {
+                width: 335px;
+                height: 328px;
+            }
+            @include breakpoint ($small-landscape) {
+                width: 221px;
+                height: 100%;
+            }
+        }
+        .content-area-right__why-section-content-text {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            .content-area-right__why-section-content-text-para {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+    &.overnight__why-section {
+        @include breakpoint ($tablet-portrait) {
+           gap: 32px;
+        }
+        .content-area-right__why-section-content {
+            gap: 32px;
+            .why-section__left-img {
+                width: 202px;
+                height: 260px;
+                border-radius: 109px 108px 167px 0px;
+                @include breakpoint ($tablet-portrait) {
+                    width: 202px;
+                    height: 193px;
+                }
+                @include breakpoint ($phone-only) {
+                    width: 335px;
+                    height: 282px;
+                }
+                @include breakpoint ($small-landscape) {
+                    width: 202px;
+                    height: 172px;
+                }
+            }
+        }
+        .content-area-right__why-section-content-points {
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            padding: 0px 58px 0px 0px;
+            gap: 12px;
+            @include breakpoint ($phone-only) {
+                padding: 0px;
+                grid-template-columns: repeat(4,1fr);
+            }
+            @include breakpoint ($small-landscape) {
+                padding: 0px;
+            }
+            @include breakpoint ($tablet-portrait) {
+                padding: 0px;
+            }
+            @include breakpoint ($tablet-landscape) {
+                padding: 0px;
+            }
+            .content-area-right__why-section-content-point-detail {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                align-items: center;
+                span {
+                    color: $gray-800;
+                    font-weight: 520;
+                    font-size: 15px;
+                    line-height: 1.4;
+                    letter-spacing: 0.014em;
+                    text-align: center;
+                }
+            }
+            &.reponsive-section {
+                display: none;
+                @include breakpoint ($tablet-landscape) {
+                    display: grid;
+                }
+                @include breakpoint ($tablet-portrait) {
+                    display: grid;
+                }
+                @include breakpoint ($small-landscape) {
+                    display: grid;
+                }
+            }
+            &.desktop-section {
+                @include breakpoint ($tablet-landscape) {
+                    display: none;
+                }
+                @include breakpoint ($tablet-portrait) {
+                    display: none;
+                }
+                @include breakpoint ($small-landscape) {
+                    display: none;
+                }
+            }
+        }
+        .why-section__left-img {
+            @include breakpoint ($phone-only) {
+                order: -1;
+            }
+        }
+    }
+}

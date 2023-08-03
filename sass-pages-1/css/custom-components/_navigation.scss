@@ -1,0 +1,74 @@
+.navigation {
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding : 0 16px;
+    border-bottom: 1px solid $grays-300;
+    
+    @include breakpoint($phone-only) {
+        height: auto;
+        padding: 16px;
+        max-height: 56px;
+    }
+
+    .logo-desktop {
+        @include breakpoint($phone-only) {
+           display: none;
+        }
+    }
+    .backarrow-mob {
+        display: none;
+        @include breakpoint($phone-only) {
+            display: flex;
+         }
+    }
+    .nav-link-list {
+        .progress-bar {
+            display: flex;
+            gap: 1px;
+            padding: 16px 0px;
+
+            .progress-chunk {
+                width: 67.9px;
+                height: 4px;
+                background: $primary-200;
+                border-radius: 20px;
+
+                @include breakpoint($tablet) {
+                    width: 40px;
+                 }
+
+                @include breakpoint($phone-only) {
+                    width: 20.56px;
+                    height: 2.8px;
+                 }
+
+            }
+            &.hide{
+                display: none;
+            }
+        }
+    }
+    &.job-posting-nav { 
+        justify-content: space-between;
+
+        .nav-btn {
+            width: 130px;
+
+            @include breakpoint($phone-only) {
+                display: none;
+            }
+        }
+    }
+}
+
+nav ul li.has-child .dropdown__detail { 
+    z-index: 9; 
+}
+
+.menu-header {
+    .navigation {
+        border: 0px none;
+    }
+}

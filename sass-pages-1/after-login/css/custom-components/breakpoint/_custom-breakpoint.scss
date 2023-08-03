@@ -1,0 +1,18 @@
+$small: max-width 415px;
+$smallplus: 415px;
+$small-portrait: (min-width 480px) (max-width 767px) (orientation portrait);
+$small-landscape: (min-width 480px) (max-width 767px) (orientation landscape);
+$small-up:  (max-width 767px) (orientation landscape);
+$medium: max-width 1024px;
+$tablet: max-width 992px;
+
+$not-phone: min-width 599px;
+$phone-only: max-width 599px;
+$tablet-portrait-up: min-width 600px;
+$tablet-landscape-up: min-width 900px;
+$desktop-up: min-width 1200px;
+$large-device : min-width 1600px;
+$big-desktop-up: min-width 1800px;
+$large-desktop : min-width 1600px;
+
+

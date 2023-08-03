@@ -1,0 +1,63 @@
+// statistics section
+
+section#statistics-section{
+    background-color: $primary-100;
+    padding: 0;
+
+.statistics-section-content-wrapper{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @include breakpoint($tablet-portrait) {
+        grid-template-columns: repeat(4,1fr) ;
+    }
+    @include breakpoint($tablet-landscape) {
+        grid-template-columns: repeat(4,1fr) ;
+    }
+
+    @include breakpoint($phone-only){
+        gap: 24px;
+        padding: 36px 24px;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .kpi{
+        display: flex;
+        flex-direction: column;
+        gap: $gap-extrasmall;
+        padding: 24px 20px 24px 0px;
+        flex-basis: 0;
+        flex: 1 1 0;
+
+        @include breakpoint($phone-only){
+            padding: 0px;
+            flex-grow: 1;
+            flex-basis: calc(100% / 3);
+        }
+
+        h2, h1 {
+            color: $primary-800;
+            font-size: 32px;
+            font-weight: 760;
+            line-height: 1.4;
+            letter-spacing: 0em;
+            margin: 0;
+            
+            @include breakpoint ($tablet-portrait) {
+                font-size: 28px;
+            }
+
+            @include breakpoint($small) {
+                font-size: 28px;
+            }
+        }
+        p {
+            color : $grey-800;
+
+            @include breakpoint($small) {
+                font-size: 15px;
+            }
+        }
+    }
+}
+}

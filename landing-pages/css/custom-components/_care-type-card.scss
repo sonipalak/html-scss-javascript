@@ -1,0 +1,143 @@
+.care-type-group{
+    display: grid;
+    gap: 64px;
+    @include breakpoint($phone-only){
+        gap: 44px;
+        grid-template-columns: 1fr;
+    }
+    @include breakpoint ($tablet-portrait) {
+        gap: 44px;
+    }
+}
+.care-type-group-inner {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    @include breakpoint ($tablet-portrait) {
+        gap: 16px;
+    }
+    @include breakpoint ($tablet-landscape) {
+        gap: 16px;
+    }
+    &.care-type-2 {
+        grid-template-columns: repeat(2,1fr);
+        gap: 24px;
+        @include breakpoint ($tablet-portrait) {
+            gap: 16px;
+        }
+        @include breakpoint($phone-only){ 
+            grid-template-columns: 1fr; 
+            gap: 16px;
+        }
+    }
+    @include breakpoint($phone-only){ 
+        grid-template-columns: 1fr; 
+        gap: 16px;
+    }
+}
+.care-type-item{
+    display: grid;
+
+    @include breakpoint($phone-only){
+        gap: 24px !important; 
+    }
+
+    svg{
+        width: 48px;
+        height: 48px; 
+        @include breakpoint($phone-only){
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .care-type-item__details{
+        display: flex;
+        flex-direction: column;
+        h2{
+            color: $grey-900;
+        }
+        p{
+            color: $grey-600;
+            font-size: 17px;
+            @include breakpoint($phone-only){
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.new-care-type-card-element {
+    padding: 16px 24px 24px !important;
+    gap: 44px !important;  
+    border-radius: 12px;
+    outline-offset: 0px !important;
+    &.new-care-type-card-1 {
+        background-color: #FBBFB6;
+        &:hover {
+            background-color: #FEA79A;
+        }
+        &:focus {
+            background-color: #FFC1B8;
+            box-shadow:0px 0px 0px 4px $primary-400;
+            outline: 0;
+            -webkit-appearance: none;
+        }
+        &:active,
+        &:visited{
+            background-color: #FC8D7C;
+        }
+    }
+    &.new-care-type-card-2 {
+        background-color: #FAE5BC;
+        &:hover {
+            background-color: #FBD296;
+        }
+        &:active,
+        &:visited {
+            background-color: #FFC167;
+        }
+        &:focus {
+            background-color: #FFE4BD;
+            box-shadow: 0px 0px 0px 4px $primary-400;
+        }
+    }
+    &.new-care-type-card-3 {
+        background-color: #BCE4E7;
+        &:hover {
+            background-color: #98D1D5;
+        }
+        &:active,
+        &:visited {
+            background-color: #5DB5BD;
+        }
+        &:focus {
+            background-color: #B4D9DC;
+            box-shadow: 0px 0px 0px 4px $primary-400;
+        }
+    }
+    .new-care-type-card-element-icon {
+        width: 52px;
+        height: 52px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 32px;
+            height: 32px;
+            max-width: 32px;
+            max-height: 32px;
+        }
+    }
+    .care-type-item__details {
+        gap: 16px !important;
+        p.care-type-item-content {
+            font-size: 16px !important;
+            font-weight: 560;
+            line-height: 1.4;
+            letter-spacing: 0;
+            color: $grey-800;
+        }
+    }
+}

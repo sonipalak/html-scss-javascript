@@ -1,0 +1,125 @@
+section.subtype-care__content{
+    
+    .subtype-care__content-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+
+        @include breakpoint($phone-only){
+            grid-template-columns: 1fr;
+            padding: 0;
+            gap: 0;
+        }
+        @include breakpoint($tablet-portrait) {
+            gap: 16px;
+        }
+
+        .poster{
+            padding: 34px 34px 64px 34px;
+            gap: 12px;
+            @include breakpoint ($tablet-portrait) {
+                padding: 24px 24px 44px;
+            }
+
+            @include breakpoint($not-phone){
+                border-radius: $radius-normal;
+            }
+
+            @include breakpoint($phone-only){
+                // padding: 34px 34px 90px 34px;
+            }
+
+            &:nth-child(1){
+                background: #FFF4EF;
+                .poster-tag{
+                    border: 1px solid #FA5200;
+                        font-weight: 640;
+                        font-size: 15px;
+                        line-height: 140%;
+                        color: #FA5200;
+                }
+            }
+            &:nth-child(2){
+                background: #E4F8FF;
+
+                .poster-tag{
+                    border: 1px solid #0C7A61;
+                        font-weight: 640;
+                        font-size: 15px;
+                        line-height: 140%;
+                        color: #0C7A61;
+                }
+            }
+
+            .poster-tag{
+                display: none;
+                padding: 12px 14px;
+                gap: 12px;
+                border-radius: 50px;
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+            }
+
+            .poster-body{
+                display: grid;
+                grid-template-rows: auto 1fr;
+                gap: 24px;
+
+                .poster-body__content{
+                    display: grid;
+                    grid-template-rows: 1fr auto;
+                    @include breakpoint ($tablet-portrait) {
+                        gap: 44px;
+                    }
+                    @include breakpoint($phone-only){
+                        gap: 64px;
+                    }
+                }
+                
+                .poster-body__content-details{
+                    display: grid;
+                    grid-template-rows: auto 1fr;   
+                    gap: 32px;
+                    
+                    h1 {
+                        @include breakpoint($tablet-portrait) {
+                            font-size: 17px;
+                        }
+                    }
+                }
+
+                img{
+                    @include breakpoint($phone-only){
+                        width: auto;
+                        height: 143px;
+                        object-fit: contain;
+                    }
+                    @include breakpoint($tablet-portrait) {
+                        width: auto;
+                        height: 104px;
+                        max-height: 104px;
+                        object-fit: cover;
+                    }
+                }
+                h1{
+                    @include breakpoint($phone-only){
+                        font-size: 17px;
+                        font-weight: 760;
+                        line-height: 140%;
+
+                    } 
+                    @include breakpoint($tablet-portrait) {
+                        font-size: 16px;
+                    }
+                }
+                p{
+                    color: $grey-600;
+                    @include breakpoint($tablet-portrait) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

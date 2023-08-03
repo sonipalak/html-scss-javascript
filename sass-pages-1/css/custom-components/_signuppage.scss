@@ -1,0 +1,32 @@
+#sign-up, #otp-screen, #log-in, body #sign-up-to-send-message-step2, body #sign-up-send-message, body #sign-up-send-message-combine {
+    .title-padding {
+        height: auto;
+    }
+    @include breakpoint($phone-only) {
+        h1 {
+            font-size: 20px;
+            font-weight: 690;
+            line-height: 1.4;
+            letter-spacing: 0.012em;
+        }
+
+        .form__body {
+            gap: 24px;
+        }
+
+    }
+}
+
+#sign-up,#log-in, #sign-up-to-send-message-step2, #sign-up-send-message, #sign-up-send-message-combine {
+    @include breakpoint($phone-only) {
+        .form__body {
+            padding-bottom: 0;
+        }
+    }
+}
+#sign-up-to-send-message-step2, #sign-up-send-message, #sign-up-send-message-combine {
+    h1 {
+        font-size: 28px;
+        letter-spacing: 0.012em;
+    }
+}

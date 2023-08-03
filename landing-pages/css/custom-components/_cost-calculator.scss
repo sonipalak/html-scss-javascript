@@ -1,0 +1,348 @@
+#cost-calculator {
+    .cost-calculator__wrapper {
+        padding-top: 48px;
+        padding-bottom: 48px;
+
+        @include breakpoint($phone-only){
+            padding: 48px 0px;
+        }
+    }
+    .cost-calculator__main {
+        display: flex;
+        flex-direction: row;
+        // overflow: hidden;
+
+        @include breakpoint($phone-only){
+            flex-direction: column;
+        }
+        @include breakpoint ($tablet-portrait)  {
+            flex-direction: column;
+        }
+        .cost-calculator__left-content {
+            flex: 0 0 50%; 
+            position: relative; 
+            max-width: 50%; 
+            display: flex;
+            gap: 32px;
+            background: $grey-100;
+            border-radius: 12px 0px 0px 12px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            @include breakpoint($phone-only){
+                flex: 0 0 100%; 
+                position: relative; 
+                max-width: 100%; 
+                border-radius: 0px;
+                gap: 24px;
+            }
+            @include breakpoint ($tablet-portrait) {
+                flex: 0 0 100%; 
+                position: relative; 
+                max-width: 100%; 
+                border-radius: 12px 12px 0px 0px;
+                gap: 24px;
+            }
+
+            max-height: 5000px;
+            overflow: hidden;
+            left: 0%;
+            padding: 0px;
+            transition: max-height 0.3s ease-in-out;
+            &.hideDiv {
+                max-height: 0;
+            }
+            .cost-calculator__image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include breakpoint ($tablet-portrait) {
+                    height: 314px;
+                    object-fit: cover;
+                }
+                @include breakpoint ($phone-only) {
+                    height: 317px;
+                    object-fit: cover;
+                }
+            }
+        }
+        .cost-calculator__right {
+            flex: 0 0 50%;
+            position: relative;
+            max-width: 50%;
+            display: flex;
+            padding: 72px;
+            gap: 64px;
+            flex-direction: column;
+            background: $grey-100;
+            border-radius: 0px 12px 12px 0px;
+            @include breakpoint($phone-only){
+                flex: 0 0 100%; 
+                position: relative; 
+                max-width: 100%; 
+                border-radius: 0px;
+                gap: 24px;
+                padding: 24px 24px 36px;
+            }
+            @include breakpoint ($tablet-portrait) {
+                flex: 0 0 100%; 
+                position: relative; 
+                max-width: 100%; 
+                border-radius: 0px 0px 12px 12px;
+                padding: 36px 64px 48px;
+                gap: 36px;
+            }
+            @include breakpoint ($tablet-landscape) {
+                padding: 64px;
+                gap: 36px;
+            }
+            .cost-calculator__right-input-content {
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+                @include breakpoint ($tablet-portrait) {
+                    gap: 32px;
+                }
+                @include breakpoint ($tablet-landscape) {
+                    gap: 32px;
+                }
+                @include breakpoint($phone-only) {
+                    gap: 24px;
+                }
+            }
+            .cost-calculator__right-input-content-header {
+                gap: 16px;
+                display: flex;
+                flex-direction: column;
+                svg {
+                    width: 48px;
+                    height: 48px;
+                    @include breakpoint ($tablet-landscape) {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    @include breakpoint ($tablet-portrait) {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    @include breakpoint($phone-only) {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+            .cost-calculator__right-title {
+                font-weight: 690;
+                color: $grey-800;
+            }
+            .cost-calculator__right-input {
+                gap: 24px;
+                display: flex;
+                flex-direction: column;
+                @include breakpoint ($phone-only) {
+                    gap: 16px;
+                }
+                span.cost-calculator__right-input-title {
+                    font-weight: 520;
+                    line-height: 1.4;
+                    color: $grey-800;
+                }
+                .cost-calculator__input-content {
+                    display: flex;
+                    gap: 8px;
+                    position: relative;
+                    
+                    @include breakpoint ($phone-only) {
+                        flex-direction: column;
+                        gap: 16px;
+                    }
+                    .calculate__cost {
+                        @include breakpoint ($phone-only) {
+                            width: 100%;
+                        }
+                    }
+                }
+                .field__wrapper {
+                    border: 1px solid $grey-300;
+                    box-shadow: 0px 1px 2px rgba(23, 25, 74, 0.05);
+                    @include breakpoint ($phone-only) {
+                        height: 53px;
+                    }
+                    &:hover {
+                        border: 1px solid $primary-400;
+                        box-shadow: 0px 0px 0px 1px $primary-200;
+                    }
+                    &:focus,
+                    &:focus-within {
+                        border: 1px solid $primary-400;
+                        box-shadow: 0px 0px 0px 4px  $primary-200;
+                    }
+                }
+            }
+            p.cost-calculator__input-info-text {
+                font-weight: 520;
+                font-size: 15px;
+                color: $grey-600;
+                line-height: 1.4;
+                letter-spacing: 0.014em;
+            }
+            .cost-calculator__right-button {
+                button {
+                    width: 100%;
+                    font-weight: 520;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    letter-spacing: 0.014em;
+                    padding: 13px 20px;
+                }
+            }
+
+            &.change-active {
+                border-radius: 12px 0px 0px 12px;
+                @include breakpoint($phone-only){
+                    border-radius: 12px 12px 0px 0px ;
+                }
+            }
+        }
+
+        .cost-calculator__right-content {
+            position: relative;
+            flex: 0 0 50%;
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 72px;
+            gap: 40px;
+            background: $primary-600;
+            border-radius: 0px 12px 12px 0px;
+            left: 100%;
+            @include breakpoint($phone-only){
+                flex: 0 0 100%; 
+                position: relative; 
+                max-width: 100%; 
+                max-height: 0;
+                overflow: hidden;
+                left: 0%;
+                padding: 0px;
+                &.showDiv {
+                    max-height: 5000px;
+                    transition: max-height 1s ease-in-out;
+                    border-radius: 0px;
+                    padding: 24px 24px 36px;
+                    gap: 28px;
+                }
+            }
+            @include breakpoint ($tablet-portrait) {
+                flex: 0 0 100%; 
+                position: relative; 
+                max-width: 100%; 
+                max-height: 0;
+                overflow: hidden;
+                left: 0%;
+                padding: 0px;
+                &.showDiv {
+                    max-height: 5000px;
+                    transition: max-height 1s ease-in-out;
+                    border-radius: 0px 0px 12px 12px;
+                    padding: 36px 64px 64px;
+                    gap: 32px;
+                }
+            }
+            @include breakpoint ($tablet-landscape) {
+                padding: 64px 36px;
+                gap: 32px;
+            }
+            .cost-calculator__search-result-title {
+                font-size: 20px;
+                color: $grey-100;
+                font-weight: 690;
+            }
+            .cost-calculator-search-result__prices {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 8px;
+                width: 100%;
+                @include breakpoint($phone-only) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(3,1fr);
+                    gap: 12px;
+                }
+                .cost-calculator-search-result__price-card {
+                    padding: 16px 12px;
+                    gap: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    background: $grey-100;
+                    border: 1px solid $grey-200;
+                    border-radius: 12px;
+                    @include breakpoint($phone-only) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        padding: 16px 20px;
+                    }
+                    @include breakpoint ($tablet-portrait) {
+                        padding: 20px;
+                    }
+                    span.cost-calculator-search-result__price-card-type {
+                        color: $grey-900;
+                        font-weight: 630;
+                        font-size: 14px;
+                    }
+                    .cost-calculator-search-result__price-card-cost {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        @include breakpoint($phone-only)  {
+                            flex-direction: row;
+                        }
+                    }
+                }
+                .cost-calculator-search-result__price-card-cost {
+                    @include breakpoint($phone-only) {
+                        flex-direction: row;
+                        display: flex;
+                        gap: 4px;
+                    }
+                    .cost-calculator-search-result__price-card-amount {
+                        color: $primary-600;
+                        @include breakpoint ($tablet-portrait) {
+                            font-size: 17px;
+                        }
+                        @include breakpoint ($tablet-landscape) {
+                            font-size: 17px;
+                        }
+                    }
+                    .cost-calculator-search-result__price-card-rate {
+                        color: $grey-600;
+                        @include breakpoint ($tablet-portrait) {
+                            font-size: 14px;
+                        }
+                        @include breakpoint ($tablet-landscape) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                
+            }
+            .cost-calculator__search-result-info {
+                color: $grey-100;
+            }
+            .cost-calculator__search-result-terms-n-conditions {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                .cost-calculator__search-result-terms-n-condition-element {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    p.search-result-terms-n-condition-element__text {
+                        color: $primary-100;
+                    }
+                }
+            }
+        }
+        ul.dropdown-menu {
+            z-index: 10;
+        }
+    }
+}
